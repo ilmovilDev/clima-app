@@ -4,6 +4,7 @@ export * from './NavBar'
 export * from './QuarterCard'
 export * from './SearchCity'
 export * from './SeconCard'
+export * from './SkeletonComp'
 export * from './ThirdCard'
 
 

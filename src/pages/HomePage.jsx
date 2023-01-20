@@ -2,11 +2,10 @@ import { useEffect } from "react"
 import { Grid } from "@mui/material"
 import { CardContent, NavBar } from "../components"
 import { useClimaStore } from "../hooks/useClimaStore"
-import { LoadingCity } from "../ui/LoadingCity"
 
 export const HomePage = () => {
 
-  const { isActive, isLoading, getWeatherApi, getForecastApi } = useClimaStore()
+  const { getWeatherApi, getForecastApi } = useClimaStore()
 
   useEffect(() => {
     getWeatherApi()

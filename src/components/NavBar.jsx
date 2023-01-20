@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AppBar, Toolbar, Typography } from "@mui/material"
+import { AppBar, Skeleton, Toolbar, Typography } from "@mui/material"
 
 import { useClimaStore } from "../hooks/useClimaStore";
 import { SearchCity } from "./SearchCity";
@@ -30,23 +30,36 @@ export const NavBar = () => {
             paddingX: 1
         }}
     >
-        <Toolbar>
-            <Typography
-                variant='titulo1' 
-                component="div" 
-                sx={{ 
-                    flexGrow: 1,
-                    color: 'light.main',
-                    letterSpacing: 2,
-                    marginX: 1,
-                    fontSize: {
-                        xs: 17.50,
-                        md: 25
-                    }
-                }}
-            >
-                {`${ cities.city }, ${ cities.country }`} 
-            </Typography>
+        <Toolbar
+            className="space-between"
+        >
+
+            {
+                cities.temp
+                ?   
+                    <Typography
+                        variant='titulo1'
+                        className="" 
+                        component="div" 
+                        sx={{ 
+                            color: 'light.main',
+                            letterSpacing: 2,
+                            marginX: 1,
+                            fontSize: {
+                                xs: 17.50,
+                                md: 25
+                            }
+                        }}
+                    >
+                        {`${ cities.city }, ${ cities.country } `}
+                    </Typography>
+                :   
+                    <Skeleton
+                        variant="rectangular"
+                        width={180}
+                        height={40}
+                    />
+            }
 
             <SearchCity/>
 

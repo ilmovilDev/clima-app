@@ -1,4 +1,4 @@
-import { Divider, Grid, List, ListItem, ListItemIcon, ListItemText, Typography } from "@mui/material"
+import { Divider, Grid, List, ListItem, ListItemIcon, ListItemText, Skeleton, Typography } from "@mui/material"
 import { Stack } from "@mui/system"
 import { useClimaStore } from "../hooks/useClimaStore";
 
@@ -71,6 +71,9 @@ export const FirstCard = () => {
             icon = <ThunderstormOutlinedIcon color="light" sx={{width: '6rem', height: '6rem'}}/>
             break;
         case 'névoa':
+            icon = <AcUnitOutlinedIcon color="light" sx={{width: '6rem', height: '6rem'}}/>
+            break;
+        case 'neve':
             icon = <AcUnitOutlinedIcon color="light" sx={{width: '6rem', height: '6rem'}}/>
             break;
         case 'chuva moderada':

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { InputAdornment, TextField } from "@mui/material"
+import { IconButton, InputAdornment, TextField } from "@mui/material"
 import { useClimaStore } from "../hooks/useClimaStore";
 
 import SearchIcon from '@mui/icons-material/Search';
@@ -26,9 +26,10 @@ export const SearchCity = () => {
         autoComplete="off"
         onSubmit={ onSubmit }
     >
-        <TextField
+        <TextField 
             label="Cidade"
             variant="outlined"
+            flexGrow={1}
             value={ city }
             onChange={ (e) => setCity( e.target.value )}
             autoFocus
@@ -49,7 +50,13 @@ export const SearchCity = () => {
                     cursor:'pointer'
                   }}
                 >
-                  <SearchIcon/>
+                  <IconButton
+                    type="submit"
+                  >
+                    <SearchIcon
+                      color="subtitulo"
+                    />
+                  </IconButton>
                 </InputAdornment>
               ),
             }}

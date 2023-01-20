@@ -39,6 +39,9 @@ export const QuarterCard = () => {
     case 'névoa':
         icon = <AcUnitOutlinedIcon color="light" sx={{width: '6rem', height: '6rem'}}/>
         break;
+    case 'neve':
+        icon = <AcUnitOutlinedIcon color="light" sx={{width: '6rem', height: '6rem'}}/>
+        break;
     case 'chuva moderada':
       icon = <FloodOutlinedIcon color="light" sx={{width: '6rem', height: '6rem'}}/>
       break;
@@ -85,7 +88,7 @@ export const QuarterCard = () => {
           direction='row'
           justifyContent='center'
           alignItems='center'
-          className="pos"
+          className="position-temp"
       >
           <Typography
               variant="h1"
@@ -110,7 +113,7 @@ export const QuarterCard = () => {
       <Grid
           item
           textAlign='center'
-          className="pos_2"
+          className="position-desc"
       >
           <Typography
               variant="titulo1"

@@ -1,7 +1,10 @@
 import { Grid } from '@mui/material'
-import { FirstCard, QuarterCard, SeconCard, ThirdCard } from "../components"
+import { FirstCard, QuarterCard, SeconCard, SkeletonComp, ThirdCard } from "../components"
+import { useClimaStore } from '../hooks/useClimaStore'
 
 export const CardContent = () => {
+
+  const { cities } = useClimaStore()
     
   return (
     <Grid
@@ -17,10 +20,18 @@ export const CardContent = () => {
             minHeight: '70vh'
         }}
         >
-        <FirstCard/>
-        <SeconCard/>
-        <ThirdCard/>
-        <QuarterCard/>
+        {
+          cities.temp ? <FirstCard/> : <SkeletonComp/>
+        }
+        {
+          cities.temp ? <SeconCard/> : <SkeletonComp/>
+        }
+        {
+          cities.temp ? <ThirdCard/> : <SkeletonComp/>
+        }
+        {
+          cities.temp ? <QuarterCard/> : <SkeletonComp/>
+        }
     </Grid>
   )
 }

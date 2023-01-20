@@ -54,6 +54,7 @@ export const useClimaStore = () => {
     const getForecastApi = async ( cit = 'curitiba' ) => {
 
         const dataDay = ( d ) => {
+
             const semana = ['Domingo','Segunda-feira','Terça-feira','Quarta-feira','Quinta-feira','Sexta-feira','Sábado']
         
             const newDate = new Date()

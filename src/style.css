@@ -21,16 +21,21 @@
 .text-white{
     color: #f7ebfd;
 }
-.pos{
+.position-temp{
     position: absolute;
     top: 40%;
     right: 0;
     left: 0;
 }
-.pos_2{
+.position-desc{
     position: absolute;
     bottom: 1rem;
     right: 1rem;
     left: 1rem;
+}
+.space-between{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
