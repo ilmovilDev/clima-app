@@ -3,9 +3,10 @@ import { getApi } from "../api/getApi"
 import { setCity, setError, setDailyForecast } from "../store/slice/climaSlice"
 
 const lang_Br = '&lang=pt_br'
+const API_KEY = 'fc4a513debeb8fcc3811b39907ffca4c';
 
-const urlWeather = `weather?&appid=${ process.env.API_KEY }${ lang_Br }&q=`
-const urlForecast = `/forecast?appid=${ process.env.API_KEY }${ lang_Br }&q=`
+const urlWeather = `weather?&appid=${ API_KEY }${ lang_Br }&q=`
+const urlForecast = `/forecast?appid=${ API_KEY }${ lang_Br }&q=`
 
 
 export const useClimaStore = () => {

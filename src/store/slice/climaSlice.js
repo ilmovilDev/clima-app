@@ -27,12 +27,6 @@ export const climaSlice = createSlice({
             state.isLoading = false
             state.errorMessage = null
         },
-        //setHourlyForecast: ( state, { payload }) => {
-        //    state.hourlyForecast = payload
-        //    state.isActive = true
-        //    state.isLoading = false
-        //    state.errorMessage = null
-        //},
         setError: ( state, { payload } ) => {
             state.isLoading = false
             state.isActive = false

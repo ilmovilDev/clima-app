@@ -23,7 +23,6 @@ export const HomePage = () => {
           sx={{
             minHeight: '100vh',
             maxWidth: '100%',
-            //backgroundColor:'primary.main',
             paddingTop: {
               xs: 10,
             }
